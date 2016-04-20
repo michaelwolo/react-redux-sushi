@@ -1,0 +1,198 @@
+/* IF YOU TREAD HERE, YOU WILL FIND SLOPPY CSS */
+/* DON'T USE AS AN EXAMPLE FOR STYLING STUFF */
+
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+html, body, h1, ul, li {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+}
+ul {
+  list-style: none;
+}
+#container {
+  height: 100%;
+}
+.menu {
+  display: flex;
+  height: 100%;
+}
+.menu-content {
+  width: calc(100% - 300px);
+}
+.order-container {
+  border-left: 1px solid black;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  width: 300px;
+}
+.navigation ul {
+  border-bottom: 1px solid black;
+  display: flex;
+  padding: 18px 20px 19px; /* Align navigation with first order entry */
+}
+.navigation li {
+  background: #AAA;
+  border-radius: 3px;
+  color: #FFF;
+  cursor: pointer;
+  padding: 6px 15px;
+}
+.navigation li.active {
+  background: #8BD;
+}
+.navigation li:not(:first-child) {
+  margin-left: 15px;
+}
+.item-list {
+  padding: 20px 20px 10px;
+}
+.item-list ul {
+  overflow: hidden;
+}
+.item-list li {
+  float: left;
+  margin: 0 5px;
+  width: calc(25% - 10px);
+}
+.menu-item {
+  border: 1px solid black;
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.menu-item:active {
+  background: #8BD;
+}
+.menu-item .image {
+  background: #DDD;
+  border: 1px solid black;
+  height: 200px;
+  margin-bottom: 8px;
+  width: 100%;
+}
+.menu-item .details {
+  overflow: hidden;
+}
+.menu-item .details span {
+  display: block;
+}
+.menu-item .details .name {
+  float: left;
+}
+.menu-item .details .price {
+  float: right;
+}
+.order-entry {
+  border-bottom: 1px solid black;
+  padding: 10px;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.order-entry .name {
+  display: block;
+  margin-bottom: 5px;
+}
+.order-entry .details {
+  display: flex;
+  justify-content: space-between;
+}
+.order-entry .pricing * {
+  display: block;
+  float: left;
+}
+.order-entry .pricing .multiplier {
+  margin: 0 5px;
+}
+.amount-toggle {
+  display: flex;
+}
+.amount-toggle .amount {
+  padding: 3px 0;
+  text-align: center;
+  width: 40px;
+}
+.amount-toggle .minus, .amount-toggle .plus {
+  background: #AAA;
+  border-radius: 50%;
+  color: #FFF;
+  cursor: pointer;
+  font-weight: bold;
+  height: 22px;
+  width: 22px;
+}
+.amount-toggle .minus {
+  padding-left: 8px;
+  padding-top: 2px;
+}
+.amount-toggle .plus {
+  padding-left: 6px;
+  padding-top: 2px;
+}
+.order ul {
+  padding-bottom: 74px;
+}
+.order .submit {
+  background: #8BD;
+  border: none;
+  border-radius: 3px;
+  color: #FFF;
+  cursor: pointer;
+  bottom: 20px;
+  display: block;
+  font-size: 15px;
+  margin: 0 auto;
+  padding: 10px 50px;
+  position: fixed;
+  left: calc(100% - 300px + 150px);
+  bottom: 10px;
+  transform: translate(-50%);
+  width: 280px;
+}
+.order .submit span {
+  display: block;
+  text-align: center;
+}
+.order .submit .total {
+  font-size: 13px;
+  margin-top: 2px;
+}
+.order-success {
+  background: rgba(0,0,0,0.3);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.order-success.hidden {
+  display: none;
+  visibility: hidden;
+}
+.order-success .modal {
+  background: #FFF;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 70px 20px;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  max-width: calc(100% - 20px);
+}
+.order-success .modal h1 {
+  margin-bottom: 10px;
+}
