@@ -9,7 +9,7 @@ export default class Menu extends Component {
   fixedScroll = (e) => {
     const event = e.nativeEvent;
     const delta = -event.wheelDelta || event.deltaY;
-    findDOMNode(this).querySelector('.order-container').scrollTop += 0.5 * delta;
+    this.refs.orderContainer.scrollTop += 0.5 * delta;
     event.preventDefault();
   }
   render() {
@@ -19,7 +19,7 @@ export default class Menu extends Component {
           <Navigation />
           <ItemList />
         </div>
-        <div className="order-container" onWheel={this.fixedScroll}>
+        <div ref="orderContainer" className="order-container" onWheel={this.fixedScroll}>
           <Order />
         </div>
         <OrderSuccessModal />
