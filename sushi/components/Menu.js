@@ -1,29 +1,21 @@
 import React, { Component } from 'react';
-import { findDOMNode } from 'react-dom';
 import Navigation from '../containers/Navigation';
 import ItemList from '../containers/ItemList';
-import Order from '../containers/Order';
+import OrderContainer from './OrderContainer';
 import OrderSuccessModal from '../containers/OrderSuccessModal';
 
-export default class Menu extends Component {
-  fixedScroll = (e) => {
-    const event = e.nativeEvent;
-    const delta = -event.wheelDelta || event.deltaY;
-    this.refs.orderContainer.scrollTop += 0.5 * delta;
-    event.preventDefault();
-  }
-  render() {
-    return (
-      <div className="menu">
-        <div className="menu-content">
-          <Navigation />
-          <ItemList />
-        </div>
-        <div ref="orderContainer" className="order-container" onWheel={this.fixedScroll}>
-          <Order />
-        </div>
-        <OrderSuccessModal />
+// Example of a pure render component without interactions
+// No need to extend functionality from React's Component class
+
+export default (props) => {
+  return (
+    <div className="menu">
+      <div className="menu-content">
+        <Navigation />
+        <ItemList />
       </div>
-    );
-  }
+      <OrderContainer />
+      <OrderSuccessModal />
+    </div>
+  );
 }
