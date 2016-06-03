@@ -94,10 +94,6 @@ ul {
 .order-entry {
   border-bottom: 1px solid black;
   padding: 10px;
-
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 .order-entry .name {
