@@ -1,5 +1,5 @@
 // For adding CSS styles to index.html with webpack
-require("./styles/style.css");
+require('./styles/style.css');
 
 import React from 'react';
 import { render } from 'react-dom';
